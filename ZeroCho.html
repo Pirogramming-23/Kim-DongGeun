@@ -6,13 +6,27 @@
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"> <!--.은 현재 폴더 의미, favicon 프로젝트 이름-->
     <title>Naver</title>
     <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
         #wrap{
             text-align: center;
         }
         #wrap-center{
             width: 1280;
+            display: inline-block;
             background-color: yellow;
+
         }
+
+        #header-hambuger{
+            margin-top: 18px;
+            background-color: blue;
+            width: 46px;
+            height: 46px;
+        }
+
         #main{
             height: 2000px;
         }
@@ -22,6 +36,10 @@
     <div id="wrap">
         <div id="wrap-center">
             <div id="header"></div>
+                <div id="hambuger">
+
+
+                </div>
             <div id="search"></div>
             <div id="nav"></div>
             <div id="main"></div>
