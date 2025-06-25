@@ -58,6 +58,9 @@
     --color_enter: #e538e2;
     --color_enter_rgb: 229, 56, 226;
         }
+        *{
+            box-sizing: border-box;
+        }
         html, body{
             margin: 0;
             padding: 0;
@@ -76,7 +79,14 @@
             text-align: left;
             position: relative;
         }
-
+        .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        }
         #header-hamburger{
             position: absolute;
             top: 18px;
@@ -102,15 +112,89 @@
         }
 
         #header-hamburger > div{
+            content: "";
+            display: block;
             background-image: url(./sp_main.png);
-            width: 26px;
-            height: 26px;
-            position: relative;
-            z-index: 1;
+            background-size: 463px 442px;
+            background-position: -311px -166px;
             background-repeat: no-repeat;
-            background-size: 422px 405px;
-            background-position: -335px -284px;
+            width: 32px;
+            height: 32px;
+            position: relative;
              
+        }
+
+        #header-shopping{
+            position: absolute;
+            top: 18px;
+            right: 42px;
+            padding: 10px;
+            display: inline-block;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        #header-shopping:hover::before{
+            position: absolute;
+            content:''; 
+            left: 1px;
+            top: 1px;
+            width: 44px;
+            height: 44px;
+            background-color: var(--color_option_bg);
+            border-radius: 50%;
+
+        }
+
+        #header-shopping > div{
+            content: "";
+            display: block;
+            background-image: url(./sp_main.png);
+            background-size: 463px 442px;
+            background-position: -33px -316px;
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+            position: relative;
+             
+        }
+
+        #header-notice{
+            position: absolute;
+            top: 18px;
+            right: -10px;
+            padding: 10px;
+            display: inline-block;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        #header-notice:hover::before{
+            position: absolute;
+            content:''; 
+            right: -10px;
+            top: 1px;
+            width: 44px;
+            height: 44px;
+            background-color: var(--color_option_bg);
+            border-radius: 50%;
+
+        }
+
+        #header-notice > div{
+            content: "";
+            display: block;
+            background-image: url(./sp_main.png);
+            background-size: 463px 442px;
+            background-position: -311px -232px;
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+            position: relative;
         }
 
         #main{
@@ -126,6 +210,18 @@
                     <!--before-->
                     <div> </div>
                     <span class="blind">확장 영역</span>
+                    <!--after-->
+                </button>
+                <button id="header-shopping">
+                    <!--before-->
+                    <div> </div>
+                    <span class="blind">장바구니</span>
+                    <!--after-->
+                </button>
+                <button id="header-notice">
+                    <!--before-->
+                    <div> </div>
+                    <span class="blind">알림</span>
                     <!--after-->
                 </button>
             </div>
