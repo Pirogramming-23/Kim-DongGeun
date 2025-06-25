@@ -71,7 +71,7 @@
         #wrap-center{
             width: 1280px;
             display: inline-block;
-            background-color: yellow;
+            background-color: white;
             position: relative;
 
         }
@@ -228,7 +228,7 @@
             </div>
             <style>
                 #search > form {
-                    display: inline-block;
+                    display: inline-flex;
                     width: 708px;
                     height: 60px;
                     border: 1px solid #03c75a;
@@ -243,11 +243,13 @@
                     outline: none;
                 }
                 #search-svg{
-                    display: inline-block;
+                    display: inline-flex;
                     width: 68px;
                     margin-right: 12px;
                     height: 100%;
                     padding-left: 10px;
+                    justify-content: center;
+                    align-items: center;
                 }
                 #search-svg svg{
                     width: 24px;
@@ -266,6 +268,15 @@
                 }
                 #search-right{
                     display: inline-block;
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: stretch;
+                }
+                #search-keyboard, #search-recent, #search-button{
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
                 }
                 #search-keyboard::before{
                     content: "";
@@ -290,6 +301,7 @@
                 }
                 #search-button::before{
                     content: "";
+                    display: inline-block;
                     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
                     background-size: 463px 442px;
                     background-position: -405px -79px;
@@ -301,12 +313,15 @@
             <div id="search">
                 <form action="">
                     <a id="search-svg" href="#">
-
+                        
                     </a>
                     <label for="search-input" class="blind">검색어 입력</label>
                     <input id="search-input" type="text" placeholder="검색어를 입력하세요.">
                     <div id="search-right">
-                        <button href="#" id="search-board">
+                        <button href="#" id="search-keyboard">
+                            <span class="blind">입력도구</span>
+                        </button>
+                        <button href="#" id="search-recent">
                             <span class="blind">자동완성/최근검색어펼치기</span>
                         </button>
                         <button id="search-button">
