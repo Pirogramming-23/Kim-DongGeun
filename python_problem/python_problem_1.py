@@ -20,4 +20,11 @@ while current <= 31:
         else:
             print(f"playerB : {current}")
         current += 1
+    if current > 31:
+        break
     turn = 1 - turn
+
+if turn == 1:
+    print("playerA win!")
+else:
+    print("playerB win!")
