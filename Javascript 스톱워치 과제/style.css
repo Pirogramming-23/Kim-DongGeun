@@ -1,0 +1,93 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.stopwatch-container {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+.display-container {
+    padding: 20px 0;
+}
+
+#display {
+    font-size: 3.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-main {
+    background-color: #3d8b3d;
+    color: white;
+}
+
+.btn-main.active {
+    background-color: #d64545;
+}
+
+.btn-alt {
+    background-color: #333;
+    color: white;
+}
+
+.btn:disabled {
+    background-color: #222;
+    color: #555;
+    cursor: not-allowed;
+}
+
+.laps-container {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px; /* For scrollbar */
+}
+
+ul#laps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid #333;
+    font-size: 1.1em;
+}
+
+li.lap-item:first-child {
+    border-top: 1px solid #333;
+}
+
+.lap-number {
+    color: #aaa;
+}
